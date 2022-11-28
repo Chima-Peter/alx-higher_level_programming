@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 str = "Holberton School"
-print("{}\n".format(3 * str))
-arr = str[0:10]
-print("{}\n".format(arr))
+print(f"{3 * str}\n")
+print(f"{str:.10}\n")
