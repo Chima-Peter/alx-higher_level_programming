@@ -4,6 +4,7 @@ class Square:
     def __init__(self, size=0):
         '''Creates a function for initialization'''
         self.__size = size
+        self.size = size
     @property
     def size(self):
         '''Gets the size to standard output'''
