@@ -3,7 +3,6 @@ class Square:
     '''Creates a class yo return square area with getter and setter'''
     def __init__(self, size=0):
         '''Creates a function for initialization'''
-        self.__size = size
         self.size = size
     @property
     def size(self):
