@@ -1,4 +1,5 @@
 #!/usr/bin/python
+'''This module creates a class and measures its area using its square'''
 class Square:
     '''Creates a class that returns the current square area'''
     def __init__(self, size):

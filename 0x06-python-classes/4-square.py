@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''This module creates a class to check for errors, measures its area and also uses its getter and setter methods'''
 class Square:
     '''Creates a class yo return square area with getter and setter'''
     def __init__(self, size=0):

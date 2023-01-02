@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''This module creates a class that defines a square but also checks for some error'''
 class Square:
     ''' This class defines a square with a private instance attribute of optional value and also does some other checks'''
     def __init__(self, size=0):

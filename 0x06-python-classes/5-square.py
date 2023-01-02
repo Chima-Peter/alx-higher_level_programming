@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''This module does getter and setter for 2 attributes, checks for errors, returns its area and also prints output using #'''
 class Square:
     '''Creates a class'''
     def __init__(self, size):

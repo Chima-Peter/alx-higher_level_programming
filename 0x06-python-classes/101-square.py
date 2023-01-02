@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-'''This module creates a class that checks for wrrors and then prints "#" in form of size and space " " in form of position'''
+'''This module creates a class that prints human-readable code when the print function is called
 class Square:
-    '''Creates a class that printf noth an integer and a tuple'''
+    '''Creates a class to print directly from str'''
     def __init__(self, size=0, position=(0,0)):
         '''Initialises the class with a value'''
         self.size = size
@@ -59,5 +59,31 @@ class Square:
                     '''Range to print " "'''
                     print(" ", end="")
                 for s in range(self.__size):
+                    '''Range to print #'''
                     print("#", end="")
                 print()
+    def __str__(self):
+        '''Prints code inside here whenever the class is called ny str or print'''
+        '''Prints in stdout the square with #'''
+        if self.__size == 0:
+            '''Prints straight line if size == 0'''
+            print()
+        else:
+            '''prints when self.__size != 0'''
+            n = 0
+            if self.__position[0] <= self.__position[1]:
+                '''sets the length of self.__position'''
+                n = self.__position[1]
+            else:
+                '''sets the length of self.__position'''
+                n = self.position[0]
+            for i in range(self.__size):
+                '''Number of times to print'''
+                for x in range(n):
+                    '''Range to print " "'''
+                    print(" ", end="")
+                for s in range(self.__size):
+                    '''Range to print #'''
+                    print("#", end="")
+                print()
+        return ""
