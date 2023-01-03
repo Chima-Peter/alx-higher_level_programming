@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"This module creates a class that measures the perimeter and area of a rectangle and changes the symbol used for string representation"
+"This module creates a class that measures the perimeter and area of a rectangle and handles classmethod"
 class Rectangle:
     "The class to be measured in both it's area and rectangle"
     number_of_instances = 0
@@ -97,3 +97,8 @@ class Rectangle:
             elif r2 > r1:
                 "If rect2 is bigger"
                 return r2
+    @classmethod
+    def square(cls, size=0):
+        "Sets the size for the class"
+        cls.width = size
+        cls.height = size
