@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("zYxWvUtSrQpOnMlKjIhGfEdCbA", end="")
+for i in range(122, 96, -1):
+    print("{}">format(chr(i)), end="")
