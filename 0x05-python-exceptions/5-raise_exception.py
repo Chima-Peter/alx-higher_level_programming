@@ -1,3 +1,3 @@
 #!/usr/bin//python3
 def raise_exception():
-    ch = 1 + "str"
+    h = 1 / "str"
