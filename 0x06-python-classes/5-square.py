@@ -44,7 +44,7 @@ class Square:
 
     def my_print(self):
         """Prints in stdout the square with the character #"""
-        for i in range(se;f.__size):
+        for i in range(self.__size):
             for n in range(self.__size):
                 print("#", end="")
             print()
