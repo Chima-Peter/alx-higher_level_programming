@@ -30,11 +30,11 @@ class Square:
         Args:
                 value: the new value of size
         """
-        if type(size) != int:
+        if type(value) != int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = value
 
     def area(self):
         """Calculates the area of a square using it's size
