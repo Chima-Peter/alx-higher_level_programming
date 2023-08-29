@@ -5,17 +5,14 @@
 class Square:
     """Defines a class that's initialised with a private attribute"""
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """Initialises attributes for the Square class. It validates
         size argument by checking TypeError and ValueError
     Args:
         size: the size of the square and set to 0 by default
         """
-        try:
-            if type(size) == int:
-                if size > 0:
-                    self.__size = size
-        except TypeError:
-            print("size must be an integer")
-        except ValueError:
-            print("size must be >= 0")
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
