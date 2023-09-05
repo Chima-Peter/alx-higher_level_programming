@@ -115,4 +115,4 @@ class Rectangle:
         Method to return a string representation of the rectangle
         to be able to recreate a new instance by using eval()
         """
-        return "Rectangle({}, {}".format(self.__width, self.__height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
