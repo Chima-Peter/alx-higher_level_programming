@@ -112,7 +112,7 @@ class Rectangle:
             return ''
         for i in range(self.__height):
             for n in range(self.__width):
-                print("{}".format(print_symbol), end="")
+                print("{}".format(Rectangle.print_symbol), end="")
             if i < (self.__height - 1):
                 print()
         return ''
