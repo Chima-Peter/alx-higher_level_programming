@@ -1,5 +1,5 @@
 #!/bin/bash
-chmod 700 *.py
+chmod 700 *.txt
 git add .
-git commit -m"0x06-python-classes"
+git commit -m"PYTHON TASKS"
 git push
