@@ -136,11 +136,11 @@ class Rectangle:
 
         Return: the bugger one ir rect_1 if equal
         """
-        if isinstance(rect_1, Rectangle) != True:
-           raise TypeError(" rect_1 must be an instance of Rectangle")
-       if isinstance(rect_2, Rectangle) != True:
-           raise TypeError("rect_2 must be an instance of Rectangle")
-       if rect_1.area() >= rect_2.area():
-           return rect_1
-       elif rect_1.area < rect_2.area():
-           return rect_2
+        if isinstance(rect_1, Rectangle) is not True:
+            raise TypeError(" rect_1 must be an instance of Rectangle")
+        if isinstance(rect_2, Rectangle) is not True:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        elif rect_1.area() < rect_2.area():
+            return rect_2
