@@ -7,7 +7,7 @@ Creates a class Rectangle that defines a a rectangle
 class Rectangle:
     """
     A class Rectangle that defines a rectangle with:
-    Instantiation with optional width and height: def __init__(self, width=0, height=0)
+    Instantiation with optional width and height using __init__
     """
     def __init__(self, width=0, height=0):
         """
@@ -58,7 +58,7 @@ class Rectangle:
         Return: The value of height
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -71,4 +71,3 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
