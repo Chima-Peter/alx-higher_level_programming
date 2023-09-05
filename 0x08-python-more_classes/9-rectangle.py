@@ -151,4 +151,4 @@ class Rectangle:
         Method that returns a new Rectangle instance with
         width == height == size
         """
-        return "Rectangle({}, {})".format(size, size)
+        return eval("Rectangle({}, {})".format(size, size))
