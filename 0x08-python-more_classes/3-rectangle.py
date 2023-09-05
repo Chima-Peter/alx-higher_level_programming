@@ -106,4 +106,4 @@ class Rectangle:
             for n in range(self.__height):
                 print("#", end="")
             print()
-
+        return ''
