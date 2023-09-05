@@ -78,7 +78,7 @@ class Rectangle:
     def area(self):
         """
         Method to calculate area of rectangle using the formula
-        
+
         Return: the caluculated area.
         """
         return self.__width * self.__height
@@ -92,4 +92,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2
-
