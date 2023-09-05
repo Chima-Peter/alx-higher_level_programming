@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Creates a class Rectangle that defines a a rectangle
+Creates a class Rectangle that defines a rectangle
 """
 
 
@@ -9,6 +9,8 @@ class Rectangle:
     A class Rectangle that defines a rectangle with:
         Args:
             Instantiation with optional width and height using init
+            Public instance method: def area(self)
+            Public instance method: def perimeter(self)
     """
     def __init__(self, width=0, height=0):
         """
@@ -72,3 +74,20 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """
+        Method to calculate area of rectangle using the formula
+        
+        Return: the caluculated area.
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Method to calculate perimeter of rectangle using the formula
+
+        Return: the caluculated perimeter.
+        """
+        return (self.__width + self.__height) * 2
+
