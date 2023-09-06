@@ -2,6 +2,8 @@
 """
 Creates a function for addition
 """
+
+
 def add_integer(a, b=98):
     """
     Function that validates, then adds two integer
