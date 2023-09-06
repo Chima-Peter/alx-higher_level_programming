@@ -1,0 +1,30 @@
+========================================================================
+HOW TO USE 3-SAY_MY_NAME MODULE
+========================================================================
+This text file is a manual on how to use the def say-my_name function in 3-say_my_name modulle
+
+USAGE
+======
+def say-my_name - A function that prints My name is <first name> <last name>
+
+
+	>>> say = __import__('3-say_my_name').say_my_name
+
+STRINGS
+=======
+	>>> say("John", "Smith")
+	My name is John Smith
+
+	>>> say('John', ("Smith"))
+        My name is John Smith
+
+OTHER DATATYPES
+===============
+	>>> say(["John"], "smith")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+SINGLE ARGUMENT
+===============
+	>>> say("John")
+	My name is John 
