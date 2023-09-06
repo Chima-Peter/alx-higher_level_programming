@@ -1,0 +1,40 @@
+=========================================================================
+HOW TO USE THE 4-PRINT_SQUARE MODULE
+=========================================================================
+This text file contains a manual on how to use the print_square function in the 4-print_square module
+
+USAGE
+=====
+def print_square -  a function that prints a square with the character #.
+
+
+	>>> ps = __import__('4-print_square').print_square
+
+SIZE IS INT
+==========
+	>>> ps(4)
+	####
+	####
+	####
+	####
+
+	>> ps(0)
+	<BLANKLINE>
+
+SIZE IS NOT INT
+===============
+	>>> ps("4")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+SIZE < 0:
+=========
+	>>> ps(-7)
+        Traceback (most recent call last):
+        ValueError: size must be >= 0
+
+SIZE IS FLOAT AND < 0
+====================
+	>>> ps(-3.5)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
