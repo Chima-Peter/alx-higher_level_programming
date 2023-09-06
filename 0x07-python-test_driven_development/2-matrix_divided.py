@@ -3,6 +3,8 @@
 Write a function that divides all elements of a matrix.
 Prototype: def matrix_divided(matrix, div):
 """
+
+
 def matrix_divided(matrix, div):
     """
     Function to divide all elements of the matrix by div
@@ -13,14 +15,16 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     new = []
     auto = len(matrix[0])
+    w = "matrix must be a matrix (list of lists) of integers/floats"
     for i in range(1, len(matrix)):
         if auto != len(matrix[i]):
             raise TypeError("Each row of the matrix must have the same size")
         auto = len(matrix[i])
     for row in matrix:
+        result = []
         for i in row:
             if type(i) != int and type(i) != float:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(w)
             result.append(round((i / div), 2))
         new.append(result)
     return new
