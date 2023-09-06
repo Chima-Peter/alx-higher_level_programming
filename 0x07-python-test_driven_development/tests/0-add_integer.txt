@@ -1,0 +1,59 @@
+========================================================================
+HOW TO USE 0-ADD_INTEGER.PY
+==========================================================================
+This module defines some tests for the 0-add_integer file and how to use it
+
+USAGE
+=====
+	add_integer - Returns the sum of two argumenst after validating that they are of type 			int of float (if float, it changes to int)
+
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Numbers
+======
+	>>> add_integer(2, 3)
+	5
+
+	>>> add_integer(9, 7)
+	16
+
+	>>> add_integer(9, 0)
+	9
+
+Floating
+========
+	>>> add_integer(5.0, 3)
+	8
+
+	>>> add_integer(5.0, 11.0)
+	16
+
+Strings
+=======
+	>>> add_integer("9", 0)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("9", "0")
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+	>>> add_integer(5, "0")
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+Lists
+=====
+	>>> add_integer([0, 1], 1)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+Single Arguments
+================
+	>>> add_integer(0)
+	98
+
+	>>> add_integer("me")
+	Traceback (most recent call last):
+        TypeError: a must be an integer
