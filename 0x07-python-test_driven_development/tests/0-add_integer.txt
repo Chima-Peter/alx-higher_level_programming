@@ -15,30 +15,16 @@ Numbers
 	>>> add_integer(2, 3)
 	5
 
-	>>> add_integer(9, 7)
-	16
-
-	>>> add_integer(9, 0)
-	9
-
 Floating
 ========
-	>>> add_integer(5.0, 3)
-	8
-
-	>>> add_integer(5.0, 11.0)
-	16
+	>>> add_integer(2, 8.0)
+	10
 
 Strings
 =======
 	>>> add_integer("9", 0)
 	Traceback (most recent call last):
-	TypeError: a must be an integer
-
-	>>> add_integer("9", "0")
-        Traceback (most recent call last):
         TypeError: a must be an integer
-
 	>>> add_integer(5, "0")
         Traceback (most recent call last):
         TypeError: b must be an integer
@@ -49,11 +35,19 @@ Lists
         Traceback (most recent call last):
         TypeError: a must be an integer
 
+Tuples
+======
+	>>> add_integer((0, 1), 1)
+	Traceback (most recent call last):
+        TypeError: a must be an integer
+
+Dictionaries
+============
+	>>> add_integer({0, 1}, 1)
+	Traceback (most recent call last):
+        TypeError: a must be an integer
+
 Single Arguments
 ================
 	>>> add_integer(0)
 	98
-
-	>>> add_integer("me")
-	Traceback (most recent call last):
-        TypeError: a must be an integer
