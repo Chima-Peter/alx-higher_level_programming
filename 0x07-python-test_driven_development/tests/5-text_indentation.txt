@@ -1,0 +1,38 @@
+===========================================================
+HOW TO USE THE 5-TEXT_INDENTATION MANUAL
+===========================================================
+This module shows how to use and also tests the text_indentation function in 5-text_indentation module
+
+USAGE
+=====
+def text_indentation - a function that prints a text with 2 new lines after each of these characters: ., ? and :
+
+
+
+	>>> text = __import__('5-text_indentation').text_indentation
+
+STRING
+=======
+	>>> text("this. is. me")
+	this.
+	<BLANKLINE>
+	is.
+	<BLANKLINE>
+	me
+
+	>>> text(("this. is. me"))
+        this.
+        <BLANKLINE>
+        is.
+        <BLANKLINE>
+        me
+
+OTHER DATATYPES
+===============
+	>>> text(99)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text(["this, me"])
+        Traceback (most recent call last):
+        TypeError: text must be a string
