@@ -2,6 +2,8 @@
 """
 Creates a class that performs a specific task
 """
+
+
 class LockedClass:
     """
     Class that cuts down on memory cost
@@ -18,6 +20,6 @@ class LockedClass:
             value: value to be assigned to variable
 
         """
-        if name is not "first_name" and not hasattr(self, name):
-            raise AttributeError
+        if name != "first_name" and not hasattr(self, name):
+            raise AttributeError("'LockedClass' object has no attribute {}'".format(name))
         object.__setattr__(self, name, value)
