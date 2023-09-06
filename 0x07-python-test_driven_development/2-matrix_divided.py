@@ -19,4 +19,8 @@ def matrix_divided(matrix, div):
         auto = len(matrix[i])
     for row in matrix:
         for i in row:
-            print(i)
+            if type(i) != int and type(i) != float:
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            result.append(round((i / div), 2))
+        new.append(result)
+    return new
