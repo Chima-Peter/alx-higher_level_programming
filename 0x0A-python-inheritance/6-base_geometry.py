@@ -1,11 +1,17 @@
-#!/usr/bin.python3
+#!/usr/bin/python3
 """
-Module that creates a class BaseGeometry
+Module that creates a class BaseGeometry based on 5-base_geometry
 """
 
 
 class BaseGeometry:
     """
-    Creates an empty class
+    Improves the BaseGeometry class
+    Args:
+        Public instance method: def area(self)
     """
-    pass
+    def area(self):
+        """
+        A function hat raises an Exception
+        """
+        raise Exception("area() is not implemented")
