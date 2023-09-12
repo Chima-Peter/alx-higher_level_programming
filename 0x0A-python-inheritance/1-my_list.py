@@ -8,10 +8,11 @@ class MyList(list):
     """
     A class that inheurts from list
     """
-    my_list = list
+    def __init__(self):
+        self.my_list = super().__init__()
     def print_sorted(self):
         """
         Sorts a list
         """
-        MyList.my_list.sort()
+        #MyList.my_list.sort()
         print("{}".format(self.my_list))
