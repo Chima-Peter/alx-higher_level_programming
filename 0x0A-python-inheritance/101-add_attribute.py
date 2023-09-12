@@ -9,5 +9,5 @@ def add_attribute(obj, name, value):
     Tries to add a new attribute to an object if possible
     """
     setattr(obj, name, value)
-    if hasattr(name) is False:
-        raise TypeError("can't add new attribute)
+    if hasattr(obj, name) is False:
+        raise TypeError("can't add new attribute")
