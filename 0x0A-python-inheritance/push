@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod 700 *.py
+git add .
+git commit -m"0x06-python-classes"
+git push
