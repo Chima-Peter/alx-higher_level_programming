@@ -25,4 +25,7 @@ class Student:
         """
         Retrieves a dictioanry representaion of a Student instance
         """
-        return Student.__dict__
+        new_dict = {'first_name': self.first_name}
+        new_dict['last_name'] = self.last_name
+        new_dict['age'] = self.age
+        return new_dict
