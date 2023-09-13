@@ -21,14 +21,18 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs=None):
+    def to_json(self, attrs=[]):
         """
         Retrieves a dictionary representaion of a Student instance
         """
         new_dict = {'first_name': self.first_name}
         new_dict['last_name'] = self.last_name
         new_dict['age'] = self.age
-        for key in new_dict:
-            if key not in attrs:
-                del new_dict[key]
-        return new_dict
+        if len(attrs) == 0:
+            return new_dict
+        fake_dict = {}
+        for name in attrs:
+            for key in new_dict:
+                if name == key:
+                    fake_dict[key] = new_dict[key]
+        return fake_dict
