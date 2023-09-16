@@ -69,10 +69,10 @@ class Rectangle(Base):
         """
         X setter
         """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueErro("x must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = x
 
     @property
@@ -86,7 +86,7 @@ class Rectangle(Base):
         """
         Y setter
         """
-        if type(value)!= int:
+        if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
