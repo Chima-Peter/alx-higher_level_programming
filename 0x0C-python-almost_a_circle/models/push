@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod 700 *.py
+git add .
+git commit -m"ALMOST_A_CIRCLE"
+git push
