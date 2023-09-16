@@ -59,3 +59,10 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1 = Rectangle(3, "2")
             r1.area()
+
+        def test_display(self):
+            """
+            Method to test display methid
+            """
+            r1 = Rectangle(1, 1)
+            self.assertEqual(r1.display(), '#')
