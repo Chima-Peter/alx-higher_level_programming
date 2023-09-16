@@ -18,9 +18,9 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-        if type(position[0]) != int and position[0] < 0:
+        if type(position[0]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if type(position[1]) != int and position[1] < 0:
+        if type(position[1]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
@@ -56,9 +56,9 @@ class Square:
             Args:
                 Value: the new coordinates
         """
-        if type(value[0]) != int and value[0] < 0:
+        if type(value[0]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if type(value[1]) != int and value[1] < 0:
+        if type(value[1]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__value = value
 
