@@ -65,7 +65,7 @@ class TestRectangle(unittest.TestCase):
         Method to test display method
         """
         r1 = Rectangle(1, 1)
-        self.assertEqual(r1.display(), True)
+        self.assertEqual(r1.display(), None)
 
     def test_str(self):
         """
@@ -75,3 +75,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(r1), "[Rectangle] (1) 1/2 - 5/5")
 
         self.assertEqual(print(r1), None)
+
+    def test_update(self):
+        """
+        Method to test display method
+        """
+        r1 = Rectangle(2, 3, 2, 2)
+        self.assertEqual(r1.display(), None)

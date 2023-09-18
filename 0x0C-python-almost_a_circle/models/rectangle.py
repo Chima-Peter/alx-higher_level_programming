@@ -118,16 +118,6 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
-    def display(self):
-        """
-        Method to print to stdout with # using width and height
-        """
-        for i in range(self.__height):
-            for n in range(self.__width):
-                print("#",end="")
-            print()
-        return True
-
     def __str__(self):
         """
         Method that returns to stdout
@@ -141,8 +131,18 @@ class Rectangle(Base):
                 character # by taking care of x and y
         """
         for i in range(self.__height):
-            for x in range(self.__x):
+            for x in range(max(self.__x, self.__y)):
                 print(" ", end="")
             for n in range(self.__width):
-                print("#")
+                print("#", end="")
             print()
+
+        def update(self, *args):
+            """
+            Assigns each argument to each attribute
+            """
+            self.__id = f_args
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
