@@ -132,4 +132,17 @@ class Rectangle(Base):
         """
         Method that returns to stdout
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,\
+                self.__x, self.__y, self.__width, self.__height)
+
+    def display(self):
+        """
+        print in stdout the Rectangle instance with the\
+                character # by taking care of x and y
+        """
+        for i in range(self.__height):
+            for x in range(self.__x):
+                print(" ", end="")
+            for n in range(self.__width):
+                print("#")
+            print()

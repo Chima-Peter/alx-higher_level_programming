@@ -60,9 +60,18 @@ class TestRectangle(unittest.TestCase):
             r1 = Rectangle(3, "2")
             r1.area()
 
-        def test_display(self):
-            """
-            Method to test display methid
-            """
-            r1 = Rectangle(1, 1)
-            self.assertEqual(r1.display(), '#')
+    def test_display(self):
+        """
+        Method to test display method
+        """
+        r1 = Rectangle(1, 1)
+        self.assertEqual(r1.display(), True)
+
+    def test_str(self):
+        """
+        Method to test __str__ method
+        """
+        r1 = Rectangle(5,5,1, 2, 1)
+        self.assertEqual(str(r1), "[Rectangle] (1) 1/2 - 5/5")
+
+        self.assertEqual(print(r1), None)
