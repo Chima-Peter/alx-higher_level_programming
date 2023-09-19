@@ -132,6 +132,7 @@ class Rectangle(Base):
         """
         print in stdout the Rectangle instance with the character # by taking care of x and y
         """
+
         for i in range(self.__height):
             for x in range(max(self.__x, self.__y)):
                 print(" ", end="")

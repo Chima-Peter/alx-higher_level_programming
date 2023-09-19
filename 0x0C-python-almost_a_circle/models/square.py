@@ -54,7 +54,7 @@ class Square(Rectangle):
         self.y = my_list[3]
 
         if len(args) == 0:
-            my_dict = {'id': self.id, 'size': self.width, self.x, 'y': self.y}
+            my_dict = {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
             for key in kwargs:
                 my_dict[key] = kwargs[key]
             self.id = my_dict['id']
