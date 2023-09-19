@@ -28,7 +28,7 @@ class Square(Rectangle):
         """
         width getter
         """
-        return self.__width
+        return self.width
     @size.setter
     def size(self, value):
         """
@@ -38,4 +38,27 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must > 0")
-        self.__width = value
+        self.width = value
+
+    def update(self, *args, **kwargs):
+        """
+        Assigns each argument to each attribute
+        """
+        my_list = [self.id, self.width,\
+                self.x, self.y]
+        for i in range(len(args)):
+            my_list[i] = args[i]
+        self.id = my_list[0]
+        self.width = my_list[1]
+        self.x = my_list[2]
+        self.y = my_list[3]
+
+        if len(args) == 0:
+            my_dict = {'id': self.id, 'size': self.width,\
+                    'x': self.x, 'y': self.y}
+            for key in kwargs:
+                my_dict[key] = kwargs[key]
+            self.id = my_dict['id']
+            self.width = my_dict['size']
+            self.x = my_dict['x']
+            self.y = my_dict['y']
