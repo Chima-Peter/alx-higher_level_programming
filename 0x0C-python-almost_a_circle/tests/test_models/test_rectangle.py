@@ -5,6 +5,7 @@ Module for testing rectangle.py
 import unittest
 from unittest.mock import patch
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class TestRectangle(unittest.TestCase):
@@ -103,3 +104,13 @@ class TestRectangle(unittest.TestCase):
         print(r1)
         self.assertEqual(r1.to_dictionary(),\
                 {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10})
+
+    def test_to_json_string(self):
+        """
+        Method to test static method
+        """
+        r1 = Rectangle(10, 7, 2, 8, 1)
+        dictionary = r1.to_dictionary()
+        self.assertEqual(Base.to_json_string([dictionary]),\
+                '[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}]')
+        self.assertTrue((type(Base.to_json_string(dictionary)) == str))

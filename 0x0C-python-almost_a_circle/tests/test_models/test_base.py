@@ -22,7 +22,3 @@ class TestBase:
         self.assertEqual(b2.id, 2)
         b3 = Base(10)
         self.assertEqual(b2.id, 10)
-
-   
-if __name__ == "__main__":
-    unittest.main()

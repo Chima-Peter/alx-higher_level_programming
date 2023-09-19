@@ -29,6 +29,17 @@ class Base:
         """
         returns the JSON string representation of list_dictionaries:
         """
-        if type(list_dict_ == None or len(list_dict) == 0:
+        if type(list_dict) == None or len(list_dict) == 0:
                 return "[]"
         return json.dumps(list_dict)
+
+    @classmethid
+    def save_to_file(cls, list_objs):
+        """
+        writes the JSON string representation of list_objs to a file
+        """
+        name = cls.__class__.__nam__ + ".json"
+        with open(name, "w+", encoding="UTF-8"):
+            if type(list_objs) == None:
+                write(" ")
+            write(to_json_string(list_objs))
