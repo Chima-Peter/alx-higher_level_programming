@@ -137,7 +137,7 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Assigns each argument to each attribute
         """
@@ -151,9 +151,14 @@ class Rectangle(Base):
         self.__x = my_list[3]
         self.__y = my_list[4]
 
-        if len(args) != 0:
-            self.id kwargs[id]
-            self.__width = kwargs[width]
-            self.__height = kwargs[height]
-            self.__x = kwargs[x]
-            self.__y = kwargs[y]
+        if len(args) == 0:
+            my_dict = {'id': self.id, 'width': self.__width,\
+                    'height': self.__height, 'x': self.__x,\
+                    'y': self.__y}
+            for key in kwargs:
+                my_dict[key] = kwargs[key]
+            self.id = my_dict['id']
+            self.__width = my_dict['width']
+            self.__height = my_dict['height']
+            self.__x = my_dict['x']
+            self.__y = my_dict['y']
