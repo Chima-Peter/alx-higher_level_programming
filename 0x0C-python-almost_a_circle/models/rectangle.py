@@ -137,12 +137,23 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-        def update(self, *args):
-            """
-            Assigns each argument to each attribute
-            """
-            self.__id = f_args
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+    def update(self, *args):
+        """
+        Assigns each argument to each attribute
+        """
+        my_list = [self.id, self.__width, self.__height,\
+                self.__x, self.__y]
+        for i in range(len(args)):
+            my_list[i] = args[i]
+        self.id = my_list[0]
+        self.__width = my_list[1]
+        self.__height = my_list[2]
+        self.__x = my_list[3]
+        self.__y = my_list[4]
+
+        if len(args) != 0:
+            self.id kwargs[id]
+            self.__width = kwargs[width]
+            self.__height = kwargs[height]
+            self.__x = kwargs[x]
+            self.__y = kwargs[y]

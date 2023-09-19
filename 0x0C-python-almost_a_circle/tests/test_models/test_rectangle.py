@@ -3,6 +3,7 @@
 Module for testing rectangle.py
 """
 import unittest
+from unittest.mock import patch
 from models.rectangle import Rectangle
 
 
@@ -80,5 +81,6 @@ class TestRectangle(unittest.TestCase):
         """
         Method to test display method
         """
-        r1 = Rectangle(2, 3, 2, 2)
-        self.assertEqual(r1.display(), None)
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89)
+        self.assertEqual(str(r1), '[Rectangle] (89) 10/10 - 10/10')
