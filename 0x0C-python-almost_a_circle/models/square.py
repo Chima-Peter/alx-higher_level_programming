@@ -62,3 +62,11 @@ class Square(Rectangle):
             self.width = my_dict['size']
             self.x = my_dict['x']
             self.y = my_dict['y']
+
+    def to_dictionary(self):
+        """
+        returns the dictionary representation of a Rectangle
+        """
+        new_dict = {'id': self.id, 'size': self.width,\
+                'x': self.x, 'y':self.y}
+        return new_dict
