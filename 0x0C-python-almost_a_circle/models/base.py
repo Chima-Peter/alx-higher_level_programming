@@ -12,13 +12,13 @@ class Base:
         class constructor __init
     """
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """
         Class contructor for Base, increments __nb_objects and set\
                 value to id
         """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -29,17 +29,20 @@ class Base:
         """
         returns the JSON string representation of list_dictionaries:
         """
-        if type(list_dict) == None or len(list_dict) == 0:
-                return "[]"
+        if type(list_dict) is None or len(list_dict) is 0:
+            return "[]"
         return json.dumps(list_dict)
 
-    @classmethid
+    @classmethod
     def save_to_file(cls, list_objs):
         """
         writes the JSON string representation of list_objs to a file
         """
-        name = cls.__class__.__nam__ + ".json"
-        with open(name, "w+", encoding="UTF-8"):
-            if type(list_objs) == None:
-                write(" ")
-            write(to_json_string(list_objs))
+        name = cls.__name__ + ".json"
+        with open(name, "w+", encoding="UTF-8") as f:
+            if type(list_objs) is None:
+                f.write(" ")
+            new_list = []
+            for i in range(len(list_objs)):
+                new_list.append(cls.to_dictionary(list_objs[i]))
+            f.write(json.dumps(new_list))

@@ -50,6 +50,7 @@ class Rectangle(Base):
         width getter
         """
         return self.__width
+
     @width.setter
     def width(self, value):
         """
@@ -67,6 +68,7 @@ class Rectangle(Base):
         Height getter
         """
         return self.__height
+
     @height.setter
     def height(self, value):
         """
@@ -84,6 +86,7 @@ class Rectangle(Base):
         X getter
         """
         return self.__x
+
     @x.setter
     def x(self, value):
         """
@@ -101,6 +104,7 @@ class Rectangle(Base):
         Y getter
         """
         return self.__y
+
     @y.setter
     def y(self, value):
         """
@@ -122,13 +126,11 @@ class Rectangle(Base):
         """
         Method that returns to stdout
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,\
-                self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def display(self):
         """
-        print in stdout the Rectangle instance with the\
-                character # by taking care of x and y
+        print in stdout the Rectangle instance with the character # by taking care of x and y
         """
         for i in range(self.__height):
             for x in range(max(self.__x, self.__y)):
@@ -141,8 +143,7 @@ class Rectangle(Base):
         """
         Assigns each argument to each attribute
         """
-        my_list = [self.id, self.__width, self.__height,\
-                self.__x, self.__y]
+        my_list = [self.id, self.__width, self.__height, self.__x, self.__y]
         for i in range(len(args)):
             my_list[i] = args[i]
         self.id = my_list[0]
@@ -152,9 +153,7 @@ class Rectangle(Base):
         self.__y = my_list[4]
 
         if len(args) == 0:
-            my_dict = {'id': self.id, 'width': self.__width,\
-                    'height': self.__height, 'x': self.__x,\
-                    'y': self.__y}
+            my_dict = {'id': self.id, 'width': self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y}
             for key in kwargs:
                 my_dict[key] = kwargs[key]
             self.id = my_dict['id']
@@ -167,6 +166,5 @@ class Rectangle(Base):
         """
         returns the dictionary representation of a Rectangle
         """
-        new_dict = {'id': self.id, 'width': self.__width,\
-                'height': self.__height, 'x': self.__x, 'y':self.__y}
+        new_dict = {'id': self.id, 'width': self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y}
         return new_dict
