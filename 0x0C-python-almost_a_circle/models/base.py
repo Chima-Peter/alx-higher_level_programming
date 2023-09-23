@@ -3,7 +3,8 @@
 Module that creates the first class Base
 """
 import json
-
+from models.rectangle import Rectangle
+from models.square import Square
 
 class Base:
     """
@@ -56,3 +57,19 @@ class Base:
         if type(json_string) is None:
             return new_list
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        returns an instance with all attributes already set
+        """
+        if cls.__name__ == "Rectangle":
+            r1 = Rectangle(0, 0)
+            r1.update(**dictionary)
+
+            return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, width, height)
+        elif cls.__name__ = "Square":
+            s1 = Square(0, 0)
+            s1.update(**dictionary)
+
+            return "[Square] ({}) {}/{} - {}".format(id, x, y, width)
