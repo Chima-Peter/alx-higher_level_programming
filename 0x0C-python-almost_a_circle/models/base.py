@@ -29,7 +29,7 @@ class Base:
         """
         returns the JSON string representation of list_dictionaries:
         """
-        if type(list_dict) is None or len(list_dict) is 0:
+        if type(list_dict) is None or len(list_dict) == 0:
             return "[]"
         return json.dumps(list_dict)
 
@@ -53,8 +53,6 @@ class Base:
         Returns the list of the JSON string representation
         """
         new_list = []
-        if len(json_string) == 0:
+        if type(json_string) is None:
             return new_list
-        for row in json_string:
-            new_list.append(row)
-        return row
+        return json.loads(json_string)
