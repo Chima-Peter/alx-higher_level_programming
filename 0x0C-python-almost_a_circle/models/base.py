@@ -71,3 +71,21 @@ class Base:
             s1 = cls(1, 1, 1, 0)
             s1.update(**dictionary)
             return str(s1)
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns a list of instances
+        """
+        new_list = []
+        name = cls.__name__ + ".json"
+
+        if os.path.exists(name) == False:
+            return new_list
+
+        with open(name, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+        old_dict = cls.from_json_string(lines)
+        for row in old_dict:
+            new_list.append(cls.create(**row))
+        return new_list
