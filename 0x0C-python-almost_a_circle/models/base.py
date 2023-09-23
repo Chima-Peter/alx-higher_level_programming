@@ -3,8 +3,7 @@
 Module that creates the first class Base
 """
 import json
-from models.rectangle import Rectangle
-from models.square import Square
+
 
 class Base:
     """
@@ -64,12 +63,11 @@ class Base:
         returns an instance with all attributes already set
         """
         if cls.__name__ == "Rectangle":
-            r1 = Rectangle(0, 0)
+            r1 = cls(1, 1, 1, 1, 0)
             r1.update(**dictionary)
+            return str(r1)
 
-            return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, width, height)
-        elif cls.__name__ = "Square":
-            s1 = Square(0, 0)
+        elif cls.__name__ == "Square":
+            s1 = cls(1, 1, 1, 0)
             s1.update(**dictionary)
-
-            return "[Square] ({}) {}/{} - {}".format(id, x, y, width)
+            return str(s1)
