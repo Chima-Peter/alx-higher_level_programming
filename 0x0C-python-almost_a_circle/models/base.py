@@ -46,3 +46,15 @@ class Base:
             for i in range(len(list_objs)):
                 new_list.append(cls.to_dictionary(list_objs[i]))
             f.write(json.dumps(new_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Returns the list of the JSON string representation
+        """
+        new_list = []
+        if len(json_string) == 0:
+            return new_list
+        for row in json_string:
+            new_list.append(row)
+        return row
