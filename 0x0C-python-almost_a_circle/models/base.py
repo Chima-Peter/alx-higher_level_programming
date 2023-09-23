@@ -3,6 +3,7 @@
 Module that creates the first class Base
 """
 import json
+import os.path
 
 
 class Base:
@@ -80,12 +81,13 @@ class Base:
         new_list = []
         name = cls.__name__ + ".json"
 
-        if os.path.exists(name) == False:
+        if os.path.exists(name) is False:
             return new_list
 
         with open(name, "r", encoding="utf-8") as f:
             lines = f.readlines()
-        old_dict = cls.from_json_string(lines)
+            for row in lines:
+                old_dict = cls.from_json_string(row)
         for row in old_dict:
             new_list.append(cls.create(**row))
         return new_list
